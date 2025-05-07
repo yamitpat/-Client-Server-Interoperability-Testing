@@ -1,0 +1,5 @@
+# Ignore virtual environment folder
+.venv/
+
+# Ignore IDE configuration folder (IntelliJ/JetBrains)
+.idea/
