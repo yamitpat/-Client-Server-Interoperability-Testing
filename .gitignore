@@ -3,3 +3,6 @@
 
 # Ignore IDE configuration folder (IntelliJ/JetBrains)
 .idea/
+
+# Ignore API token senstivity
+*.env

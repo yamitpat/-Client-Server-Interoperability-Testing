@@ -1,0 +1,14 @@
+This project uses the Hugging Face image classification API.
+To keep the API token secure and ensure the code runs for everyone, we use a .env file and environment variables.
+To use the real Hugging Face API, create a file named .env in the /server directory
+Inside this file, add: HF_API_TOKEN=your_token_here
+Replace your_token_here with your actual Hugging Face API token (can be generated from https://huggingface.co/settings/tokens).
+
+No token? It still works!
+If the .env file is missing or the HF_API_TOKEN variable is not set, the server will automatically fall back to mock classification results. This ensures the app is fully testable without any external setup.
+This design lets:
+* Graders test the server without needing a token ✅
+* Developers test locally without worrying about secrets ✅
+* Users get real classification results when a token is provided ✅
+
+To enable .env support, we use python-dotenv. Be sure to install all server dependencies
