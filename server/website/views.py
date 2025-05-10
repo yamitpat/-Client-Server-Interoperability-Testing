@@ -105,9 +105,6 @@ def upload_image():
 
 def method_not_allowed(e):
     return jsonify({"error": {"http_status": 405, "message": "Method not allowed"}}), 405
-@views.route('/about')
-def about():
-    return render_template('about.html'), 200
 
 @views.route('/status')
 def status():
@@ -129,6 +126,6 @@ def status():
 
     return jsonify(response), 200
 
-@views.route('/secret')
+@views.route('/secret')     # TODO: maybe need to erase this?
 def secret():
     return {"error": {"http_status": 401, "message": "You are not logged in"}}, 401
