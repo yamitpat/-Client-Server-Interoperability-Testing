@@ -66,6 +66,7 @@ def call_image_classification_api(image_bytes):
         })
 
     return matches
+
 # Define the routes for the views blueprint
 @views.route('/')
 def home():
@@ -110,7 +111,7 @@ def method_not_allowed(e):
 def status():
     global success_count, fail_count, start_time
     uptime = round(time.time() - start_time, 1)
-    health = "ok"
+    health = "ok"       # TODO: can also be "error"
 
     response = {
         "status": {
@@ -125,7 +126,3 @@ def status():
     }
 
     return jsonify(response), 200
-
-@views.route('/secret')     # TODO: maybe need to erase this?
-def secret():
-    return {"error": {"http_status": 401, "message": "You are not logged in"}}, 401
