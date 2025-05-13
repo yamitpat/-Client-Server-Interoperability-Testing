@@ -21,7 +21,7 @@ HF_API_URL = "https://api-inference.huggingface.co/models/google/vit-base-patch1
 
 # API token for authentication
 load_dotenv()
-HF_API_TOKEN =os.getenv("HF_API_TOKEN")
+HF_API_TOKEN = os.getenv("HF_API_TOKEN")
 def call_image_classification_api(image_bytes):
     # Detect image format to set correct Content-Type
     # Send image to Hugging Face inference API
