@@ -111,7 +111,7 @@ def method_not_allowed(e):
 def status():
     global success_count, fail_count, start_time
     uptime = round(time.time() - start_time, 1)
-    health = "ok"       # TODO: can also be "error"
+    health = "ok"       # will always be "ok" because of fallback in API classification
 
     response = {
         "status": {
